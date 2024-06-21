@@ -79,3 +79,29 @@ def jogar():
                 print("Estrelas deletadas com sucesso!")
             except:
                 print("Erro ao deletar as estrelas!")
+        
+        
+        tela.blit(fundo, (0, 0))
+        text_surface = font.render("Pressione F10 para Salvar os Pontos", True, branco)
+        tela.blit(text_surface, (20, 10))
+        text_surface = font.render("Pressione F11 para Carregar os Pontos", True, branco)
+        tela.blit(text_surface, (20, 30))
+        text_surface = font.render("Pressione F12 para Deletar os Pontos", True, branco)
+        tela.blit(text_surface, (20, 50))
+
+        for star in pontos:
+            pygame.draw.circle(tela, branco, star['cord_mouse'], 5)
+            text_surface = font.render(f"{star['nome_stars']} {str(star['cord_mouse'])}", True, branco)
+            tela.blit(text_surface, (star['cord_mouse'][0], star['cord_mouse'][1] - 20))
+        
+        if len(pontos) > 1:
+            l_temp = [p["cord_mouse"] for p in pontos]
+            pygame.draw.lines(tela, branco, False, l_temp)
+        
+        pygame.display.flip()
+        clock.tick(30)
+    
+    pygame.quit()
+    sys.exit()
+if _name_ == "_main_":
+    jogar()
