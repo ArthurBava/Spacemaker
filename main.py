@@ -20,4 +20,3 @@ pygame.display.set_icon(icone)
 
 # Lista para armazenar os pontos das estrelas
 pontos = []
-
