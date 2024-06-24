@@ -1,8 +1,8 @@
 import cx_Freeze
 executaveis = [ 
-               cx_Freeze.Executable(script="main.py", icon="assets/icone.ico") ]
+               cx_Freeze.Executable(script="main.py", icon="assets/space.ico") ]
 cx_Freeze.setup(
-    name = "Iron Man",
+    name = "Spacemaker",
     options={
         "build_exe":{
             "packages":["pygame"],
@@ -10,6 +10,3 @@ cx_Freeze.setup(
         }
     }, executables = executaveis
 )
-
-# python setup.py build
-# python setup.py bdist_msi
