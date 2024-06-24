@@ -6,9 +6,9 @@ from pygame.locals import *
 # Inicializar o Pygame
 pygame.init()
 
-# Definir configurações básicas
+
 tamanho = (1000, 563)
-branco = (255, 255, 255)  # Corrigido para a cor branca correta
+branco = (255, 255, 255)  
 relogio = pygame.time.Clock()
 tela = pygame.display.set_mode(tamanho)
 fundo = pygame.image.load("assets/bg.jpg")
